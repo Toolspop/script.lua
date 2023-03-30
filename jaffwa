@@ -31,6 +31,6 @@ local Paragraph = Tab:CreateParagraph({Title = "Ключ обновляется 
 local Button = Tab:CreateButton({
    Name = "load scipt",
    Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/lol/main/scriptksg"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/main/sctipti.lua"))()
    end,
 })
