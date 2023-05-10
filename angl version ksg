@@ -164,7 +164,7 @@ end
 
 end)
 
-Section:NewButton("", " turn off portal", function()
+Section:NewButton("turn off portal", " turn off portal", function()
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(181.444473, -69.2206268, 208.394928, -0.939700961, 0, 0.341998369, 0, 1, 0, -0.341998369, 0, -0.939700961)
 
