@@ -29,8 +29,15 @@ local Section = Tab:CreateSection("made in china")
 local Label = Tab:CreateLabel("necessary")
 local Paragraph = Tab:CreateParagraph({Title = "Ключ обновляется часто", Content = "Советую оставаться в дс сервере"})
 local Button = Tab:CreateButton({
-   Name = "load scipt",
+   Name = "load scipt rus version",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/main/sctipti.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "load scipt engl version",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/main/angl%20version%20ksg"))()
    end,
 })
