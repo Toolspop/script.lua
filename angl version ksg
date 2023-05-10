@@ -26,7 +26,7 @@ Section:NewButton("teleport into a room with light", "тп", function()
 
 end)
 
-Section:NewButton("", "тп", function(teleport to officer's room)
+Section:NewButton("teleport to officer's room", "тп", function()
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-34.7864494, 14.3801413, 155.667755, 0.90629667, 0, 0.422642082, 0, 1, 0, -0.422642082, 0, 0.90629667)
 
