@@ -20,7 +20,7 @@ local Window = Rayfield:CreateWindow({
         FileName = "BPHkey",
         SaveKey = false,
         GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-        Key = "where key"
+        Key = "abc"
     }
 })
  --- Local ---
@@ -29,7 +29,7 @@ local Section = Tab:CreateSection("made in china")
 local Label = Tab:CreateLabel("necessary")
 local Paragraph = Tab:CreateParagraph({Title = "Ключ обновляется часто", Content = "Советую оставаться в дс сервере"})
 local Button = Tab:CreateButton({
-   Name = "load scipt rus version",
+   Name = "load scipt КГС rus version",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/main/sctipti.lua"))()
    end,
@@ -38,8 +38,16 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/m
 
 
 local Button = Tab:CreateButton({
-   Name = "load scipt eng version",
+   Name = "load scipt КСГ eng version",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/main/angl%20version%20ksg"))()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "load scipt ability wars",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/main/abilityi%20wars.lua"))()
    end,
 })
