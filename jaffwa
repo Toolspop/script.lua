@@ -27,9 +27,10 @@ local Window = Rayfield:CreateWindow({
 local Tab = Window:CreateTab("Script", 4483362458)
 local Section = Tab:CreateSection("made in china")
 local Label = Tab:CreateLabel("necessary")
-local Paragraph = Tab:CreateParagraph({Title = "Ключ обновляется часто", Content = "Советую оставаться в дс сервере"})
+local Label = Tab:CreateLabel("load scripts")
+local Paragraph = Tab:CreateParagraph({Title = "The  key is updated frequently", Content = "I advise you to stay in the ds server"})
 local Button = Tab:CreateButton({
-   Name = "load scipt КГС rus version",
+   Name = "КГС rus version",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/main/sctipti.lua"))()
    end,
@@ -38,7 +39,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/m
 
 
 local Button = Tab:CreateButton({
-   Name = "load scipt КСГ eng version",
+   Name = "КСГ eng version",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/main/angl%20version%20ksg"))()
    end,
@@ -46,7 +47,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/m
 
 
 local Button = Tab:CreateButton({
-   Name = "load scipt ability wars",
+   Name = "ability wars",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Toolspop/script.lua/main/abilityi%20wars.lua"))()
    end,
