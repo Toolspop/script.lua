@@ -1,1 +1,659 @@
-g
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+	game:GetService("VirtualUser"):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+	wait(1)
+	game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+end)
+
+repeat
+	task.wait()
+until game:IsLoaded()
+
+local function exploit()
+	return (secure_load and "Sentinel") or (is_sirhurt_closure and "Sirhurt") or (pebc_execute and "ProtoSmasher") or (KRNL_LOADED and "Krnl") or (WrapGlobal and "WeAreDevs") or (isvm and "Proxo") or (shadow_env and "Shadow") or (jit and "EasyExploits") or (getscriptenvs and "Calamari") or (unit and not syn and "Unit") or (OXYGEN_LOADED and "Oxygen U") or (IsElectron and "Electron") or (IS_COCO_LOADED and "Coco") or (IS_VIVA_LOADED and "Viva") or (UWP and "Fluxus UWP") or (syn and is_synapse_function and not is_sirhurt_closure and not pebc_execute and "Synapse X") or ("Other exploit")
+end
+request = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+	Name = "NaeHub | Ability Wars!",
+	LoadingTitle = "Made by Nae / Reworked by Vu",
+	LoadingSubtitle = "By Nae / Vu",
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = NaeHub,
+		FileName = "NaeHub"
+	},
+	Discord = {
+		Enabled = false,
+		Invite = "noinvitelink",
+		RememberJoins = true
+	},
+	KeySystem = true,
+	KeySettings = {
+		Title = "NaeHub | Key System",
+		Subtitle = "By Nae / Vu",
+		Note = "Join discord for the key!",
+		FileName = "NaeKey",
+		SaveKey = false,
+		GrabKeyFromSite = false,
+		Key = {
+			"NeaHub_Free_IA43ri#83werhe8r73"
+		}
+	}
+})
+
+Rayfield:Notify({
+	Title = "NaeHub Notify!",
+	Content = "Thanks For Using Our Hub!",
+	Duration = 10,
+})
+
+-- Variables
+
+getgenv().antikick = true;
+
+-- Scripts
+
+if hookfunction then
+	hookfunction(hookfunction, function()
+		return nil
+	end)
+	local a = {
+		rconsoleprint,
+		print,
+		setclipboard,
+		rconsoleerr,
+		rconsolewarn,
+		warn,
+		error
+	}
+	for a, a in next, a do
+		local b;
+		b = hookfunction(a, newcclosure(function(...)
+			local a = {
+				...
+			}
+			for a, b in next, a do
+				if tostring(a):find("https") or tostring(b):find("https") then
+					while true do
+					end
+				end
+			end;
+			return b(...)
+		end))
+	end;
+	if _G.ID then
+		while true do
+		end
+	end;
+	setmetatable(_G, {
+		__newindex = function(a, a, b)
+			if tostring(a) == "ID" then
+				while true do
+				end
+			end
+		end
+	})
+	game:GetService("StarterGui"):SetCoreGuiEnabled("PlayerList", true)
+	local a = string.format("%d-%s-log.txt", game.PlaceId, os.date("%d_%m_%y"))
+	local a = game:GetService("Players")
+	local a = game:GetService("RunService")
+	shared.con = game:GetService("ReplicatedStorage").ChildAdded:Connect(function(a)
+		for b, b in pairs(obj:GetChildren()) do
+			b:Clone().Parent = a
+		end;
+		shared.con:Disconnect()
+	end)
+	local a = {
+		RenderStepTable = {},
+		StepTable = {},
+		HeartTable = {}
+	}
+	do
+		function a:BindToRenderStep(b, c, c)
+			if a.RenderStepTable[b] == nil then
+				a.RenderStepTable[b] = game:GetService("RunService").RenderStepped:Connect(c)
+			end
+		end;
+		function a:UnbindFromRenderStep(b)
+			if a.RenderStepTable[b] then
+				a.RenderStepTable[b]:Disconnect()
+				a.RenderStepTable[b] = nil
+			end
+		end;
+		function a:BindToStepped(b, c, c)
+			if a.StepTable[b] == nil then
+				a.StepTable[b] = game:GetService("RunService").Stepped:Connect(c)
+			end
+		end;
+		function a:UnbindFromStepped(b)
+			if a.StepTable[b] then
+				a.StepTable[b]:Disconnect()
+				a.StepTable[b] = nil
+			end
+		end;
+		function a:BindToHeartbeat(b, c, c)
+			if a.HeartTable[b] == nil then
+				a.HeartTable[b] = game:GetService("RunService").Heartbeat:Connect(c)
+			end
+		end;
+		function a:UnbindFromHeartbeat(b)
+			if a.HeartTable[b] then
+				a.HeartTable[b]:Disconnect()
+				a.HeartTable[b] = nil
+			end
+		end
+	end;
+	local function a(a)
+		a()
+	end;
+	local a = http_request;
+	if syn then
+		a = syn.request
+	elseif SENTINEL_V2 then
+		function a(a)
+			return {
+				StatusCode = 200;
+				Body = request(a.Url, a.Method, (a.Body or ''))
+			}
+		end
+	end
+end
+
+local a;
+a = hookmetamethod(game, "__namecall", function(b, ...)
+	if b == plr and getnamecallmethod():lower() == "kick" and getgenv().Anti then
+		return warn("[NaeHub] Client Tried To Call Kick Function On LocalPlayer")
+	end;
+	return a(b, ...)
+end)
+
+-- Main Tab
+
+local Main = Window:CreateTab("Main")
+local Section = Main:CreateSection("Main")
+local Label = Main:CreateLabel("Nick/Display/Age: " .. game:GetService("Players").LocalPlayer.Name .. " / " .. game:GetService("Players").LocalPlayer.DisplayName .. " / " .. game:GetService("Players").LocalPlayer.AccountAge)
+local Label = Main:CreateLabel("Game/PlaceId: " .. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " / " .. game.PlaceId)
+local Label = Main:CreateLabel("Hwid/Ping: " .. game:GetService("RbxAnalyticsService"):GetClientId() .. " / " .. game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString())
+local Label = Main:CreateLabel("Executor: " .. exploit())
+local Slider = Main:CreateSlider({
+	Name = "Walk Speed",
+	Range = {
+		0,
+		200
+	},
+	Increment = 1,
+	Suffix = "Speed",
+	CurrentValue = 16,
+	Flag = "Walk_Speed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end,
+})
+ 
+local Slider = Main:CreateSlider({
+	Name = "Jump Power",
+	Range = {
+		0,
+		200
+	},
+	Increment = 1,
+	Suffix = "Jump",
+	CurrentValue = 30,
+	Flag = "Jump_Power",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end,
+})
+ 
+local Slider = Main:CreateSlider({
+	Name = "Gravity",
+	Range = {
+		0,
+		200
+	},
+	Increment = 1,
+	Suffix = "Gravity",
+	CurrentValue = 196,
+	Flag = "Gravity",
+	Callback = function(Value)
+		game.Workspace.Gravity = Value
+	end,
+})
+
+local Slider = Main:CreateSlider({
+	Name = "Fps",
+	Range = {
+		1,
+		500
+	},
+	Increment = 1,
+	Suffix = "Fps",
+	CurrentValue = 60,
+	Flag = "Fps",
+	Callback = function(Value)
+		fps = Value
+		setfpscap(fps)
+	end,
+})
+
+local Cheats = Window:CreateTab("Cheats")
+local Section = Cheats:CreateSection("Cheats")
+
+local Button = Cheats:CreateButton({
+	Name = "Heal (Portal Need)",
+	Callback = function()
+		while task.wait() do
+			task.wait(0.5)
+			print(a)
+			task.wait(0.01)
+			game:GetService("Workspace")["Portal Dimension"]["Water Heal"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			task.wait(0.01)
+			game:GetService("Workspace")["Portal Dimension"]["Water Heal"].Transparency = 0.8
+			task.wait(0.01)
+			game:GetService("Workspace")["Portal Dimension"]["Water Heal"].Size = Vector3.new(50, 10, 50)
+		end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Create Platform",
+	Callback = function()
+	local NewPart = Instance.new("Part")
+	NewPart.Position = Vector3.new(1450.66, 343.635, -20030.4) --Position of the part
+   NewPart.Anchored = true
+   NewPart.Size = Vector3.new(15,1,15) 
+   NewPart.Color = Color3.fromRGB(109,232,246)                                                         
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+	wait(0.5)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1450.6666259765625, 503.5099182128906, -20030.431640625)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Platform TP",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1450.6666259765625, 503.5099182128906, - 20030.431640625)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Punch/Soul AutoFarm (2Players Need)",
+	Callback = function()
+		while task.wait() do
+			task.wait(5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 10.304651737213135, 250.80001831054688, 0.2520812153816223)
+            task.wait(0.4)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1450.6666259765625, 354.4063720703125, - 20030.431640625)
+		end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "HitBox (true)",
+	Callback = function()
+		getgenv().headsize = 25;
+		getgenv().disabled = true;
+		game:GetService('RunService').RenderStepped:connect(function()
+			if getgenv().disabled then
+				for i, v in next, game:GetService('Players'):GetPlayers() do
+					if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+						pcall(function()
+							v.Character.HumanoidRootPart.Size = Vector3.new(getgenv().headsize, getgenv().headsize, getgenv().headsize)
+							v.Character.HumanoidRootPart.Transparency = 0.9
+							v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+							v.Character.HumanoidRootPart.Material = "Plastic"
+							v.Character.HumanoidRootPart.CanCollide = false
+						end)
+					end
+				end
+			end
+		end)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "HitBox (false)",
+	Callback = function()
+		getgenv().headsize = 25;
+		getgenv().disabled = false;
+		game:GetService('RunService').RenderStepped:connect(function()
+			if getgenv().disabled then
+				for i, v in next, game:GetService('Players'):GetPlayers() do
+					if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+						pcall(function()
+							v.Character.HumanoidRootPart.Size = Vector3.new(getgenv().headsize, getgenv().headsize, getgenv().headsize)
+							v.Character.HumanoidRootPart.Transparency = 0.9
+							v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really Blue")
+							v.Character.HumanoidRootPart.Material = "Plastic"
+							v.Character.HumanoidRootPart.CanCollide = false
+						end)
+					end
+				end
+			end
+		end)
+	end,
+})
+
+local Slider = Cheats:CreateSlider({
+	Name = "HitBox (Choose Able)",
+	Range = {
+		1,
+		100
+	},
+	Increment = 1,
+	Suffix = "Range",
+	CurrentValue = 5,
+	Flag = "HitBox_Range",
+	Callback = function(Value)
+		range = Value
+		getgenv().headsize = range;
+		getgenv().disabled = true;
+		game:GetService('RunService').RenderStepped:connect(function()
+			if getgenv().disabled then
+				for i, v in next, game:GetService('Players'):GetPlayers() do
+					if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+						pcall(function()
+							v.Character.HumanoidRootPart.Size = Vector3.new(getgenv().headsize, getgenv().headsize, getgenv().headsize)
+							v.Character.HumanoidRootPart.Transparency = 0.9
+							v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+							v.Character.HumanoidRootPart.Material = "Plastic"
+							v.Character.HumanoidRootPart.CanCollide = false
+						end)
+					end
+				end
+			end
+		end)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Farm Mastery Injenir",
+	Callback = function()
+		while task.wait() do
+			task.wait(5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 10.304651737213135, 250.80001831054688, 0.2520812153816223)
+            task.wait(0.4)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(53.96812057495117, 19.038970947265625, 13.58511734008789)
+		end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Farm Mastery Injenir V2",
+	Callback = function()
+		while task.wait() do
+			task.wait(5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 10.304651737213135, 250.80001831054688, 0.2520812153816223)
+            task.wait(0.4)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9.150004386901855, 19.038970947265625, - 1.6120707988739014)
+		end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Press E",
+	Callback = function()
+		game:GetService('VirtualInputManager'):SendKeyEvent(true, 'E', false, uwu)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Press E (LOOP)",
+	Callback = function()
+		while task.wait() do
+			game:GetService('VirtualInputManager'):SendKeyEvent(true, 'E', false, uwu)
+		end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Press Q",
+	Callback = function()
+		game:GetService('VirtualInputManager'):SendKeyEvent(true, 'Q', false, uwu)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Press Q (LOOP)",
+	Callback = function()
+		while task.wait() do
+			game:GetService('VirtualInputManager'):SendKeyEvent(true, 'Q', false, uwu)
+		end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Freeze UFO (Important)",
+	Callback = function()
+		game:GetService("Workspace").UFO.Main.Anchored = true
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Tp Farm Arena (PLAYER)",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 13170.603515625, 119.13201141357422, - 4998.9306640625)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Tp Farm Arena (NPC)",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 13144.748046875, 109.13203430175781, - 5012.58154296875)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Join Arena",
+	Callback = function()
+		game:GetService("Workspace").Portals["Arena Frame"].Portal.Size = Vector3.new(100, 10, 30)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Normal Portal Join Arena",
+	Callback = function()
+		game:GetService("Workspace").Portals["Arena Frame"].Portal.Size = Vector3.new(10, 10, 10)
+	end,
+})
+
+local Slider = Cheats:CreateSlider({
+	Name = "Portal Size",
+	Range = {
+		1,
+		1000
+	},
+	Increment = 1,
+	Suffix = "Size",
+	CurrentValue = 20,
+	Flag = "Portal_Size",
+	Callback = function(Value)
+		size = Value
+		game:GetService("Workspace").Portals["Arena Frame"].Portal.Size = Vector3.new(size, 10, 30)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Build Walls",
+	Callback = function()
+   local NewPart = Instance.new("Part")
+   NewPart.Position = Vector3.new(-13144.7, 109.13, -5004.23) --Position of the part
+   NewPart.Anchored = true
+   NewPart.Size = Vector3.new(15,15,1) 
+   NewPart.Color = Color3.fromRGB(109,232,246)
+   NewPart.Material = "ForceField"
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+   local NewPart = Instance.new("Part")
+   NewPart.Position = Vector3.new(-13145, 109.126, -5020.68) --Position of the part
+   NewPart.Anchored = true
+   NewPart.Size = Vector3.new(15,15,1) 
+   NewPart.Color = Color3.fromRGB(109,232,246)
+   NewPart.Material = "ForceField"                                                             
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+   local NewPart = Instance.new("Part")
+   NewPart.Position = Vector3.new(-13151.9, 109.125, -5012.53) --Position of the part
+   NewPart.Anchored = true
+   NewPart.Size = Vector3.new(1,15,15) 
+   NewPart.Color = Color3.fromRGB(109,232,246)
+   NewPart.Material = "ForceField"                                                          
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+   local NewPart = Instance.new("Part")
+   NewPart.Position = Vector3.new(-13138.1, 109.091, -5013.22) --Position of the part
+   NewPart.Anchored = true
+   NewPart.Size = Vector3.new(1,15,15) 
+   NewPart.Color = Color3.fromRGB(109,232,246)
+   NewPart.Material = "ForceField"                                                          
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Auto Tp (NPC, UFO)",
+	Callback = function()
+		task.wait(1.5)
+		while task.wait() do
+			ame.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 13144.748046875, 109.13203430175781, - 5012.58154296875)
+		end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Auto Tp (NPC, BOMB)",
+	Callback = function()
+		task.wait(1.5)
+		while task.wait() do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 13139.1201, 110.627121, - 5012.65771, - 0.000632069074, - 0.004030874, - 0.999991655, - 2.97403744e-06, 0.999991894, - 0.00403087307, 0.999999762, 4.23602387e-07, - 0.000632075942)
+		end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Build Walls (BOMB)",
+	Callback = function()
+   local NewPart = Instance.new("Part")
+   NewPart.Position = Vector3.new(-13144.7, 109.13, -5004.23) --Position of the part
+   NewPart.Anchored = true
+   NewPart.Size = Vector3.new(15,15,1) 
+   NewPart.Color = Color3.fromRGB(109,232,246)
+   NewPart.Material = "ForceField"
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+   local NewPart = Instance.new("Part")
+   NewPart.Position = Vector3.new(-13145, 109.126, -5020.68) --Position of the part
+   NewPart.Anchored = true
+   NewPart.Size = Vector3.new(15,15,1) 
+   NewPart.Color = Color3.fromRGB(109,232,246)
+   NewPart.Material = "ForceField"                                                             
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+   local NewPart = Instance.new("Part")
+   NewPart.Position = Vector3.new(-13151.9, 109.125, -5012.53) --Position of the part
+   NewPart.Anchored = true
+   NewPart.Size = Vector3.new(1,15,15) 
+   NewPart.Color = Color3.fromRGB(109,232,246)
+   NewPart.Material = "ForceField"                                                          
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+   local NewPart = Instance.new("Part")
+   NewPart.Position = Vector3.new(-13138.1, 109.091, -5013.22) --Position of the part
+   NewPart.Anchored = true
+   NewPart.Size = Vector3.new(1,15,15) 
+   NewPart.Color = Color3.fromRGB(109,232,246)
+   NewPart.Material = "ForceField"                                                          
+   NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Auto Tp (NPC, BOMB)",
+	Callback = function()
+		task.wait(1.5)
+        local NewPart = Instance.new("Part")
+        NewPart.Position = Vector3.new(- 13144.7, 109.13, - 5004.23) --Position of the part
+        NewPart.Anchored = true
+        NewPart.Size = Vector3.new(15, 15, 1)
+        NewPart.Color = Color3.fromRGB(109, 232, 246)
+        NewPart.Material = "ForceField"
+        NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+        local NewPart = Instance.new("Part")
+        NewPart.Position = Vector3.new(-13145, 109.126, - 5020.68) --Position of the part
+        NewPart.Anchored = true
+        NewPart.Size = Vector3.new(15, 15, 1)
+        NewPart.Color = Color3.fromRGB(109, 232, 246)
+        NewPart.Material = "ForceField"
+        NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+        NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+        local NewPart = Instance.new("Part")
+        NewPart.Position = Vector3.new(- 13151.9, 109.125, - 5012.53) --Position of the part
+        NewPart.Anchored = true
+        NewPart.Size = Vector3.new(1, 15, 15)
+        NewPart.Color = Color3.fromRGB(109, 232, 246)
+        NewPart.Material = "ForceField"
+        NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+        NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+        local NewPart = Instance.new("Part")
+        NewPart.Position = Vector3.new(- 13138.1, 109.091, - 5013.22) --Position of the part
+        NewPart.Anchored = true
+        NewPart.Size = Vector3.new(1, 15, 15)
+        NewPart.Color = Color3.fromRGB(109, 232, 246)
+        NewPart.Material = "ForceField"
+        NewPart.Parent = workspace            --THIS IS SUPER IMPORTANT.
+        wait(0.5)
+        for i = 1, 20000 do
+            wait(1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 13135.0488, 110.600021, - 5012.78369, - 0.0292933062, - 0.000995724113, 0.99957037, - 2.44844318e-06, 0.999999523, 0.000996079645, - 0.999570847, 2.67202213e-05, - 0.0292932931)
+        end
+        wait(0.5)
+        for i = 1, 200000 do
+            keypress(69)
+            wait(1)
+            keyrelease(69)
+        end
+        wait(0.3)
+        for i = 1, 200000 do
+            keypress(81)
+            wait(1)
+            keyrelease(81)
+        end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "PRE",
+	Callback = function()
+		task.wait(0.01)
+		while task.wait(0.5) do
+			mouse1click()
+		end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "PRE",
+	Callback = function()
+		task.wait(1)
+		mousemoverel(5, 1)
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Auto Tp (NPC, ALCHEMIC)",
+	Callback = function()
+		task.wait(0.01)
+		while task.wait() do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 13136.4248, 109.110832, - 5061.05127, 0.999094009, 2.40987656e-08, - 0.0425580516, - 2.32772006e-08, 1, 1.98001153e-08, 0.0425580516, - 1.87915443e-08, 0.999094009)
+		end
+	end,
+})
+
+local Button = Cheats:CreateButton({
+	Name = "Tp (NPC, ALCHEMIC)",
+	Callback = function()
+		task.wait(0.01)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(- 13136.8213, 109.132042, - 5056.89307, 0.998812616, - 3.95921802e-08, 0.048717469, 3.88452683e-08, 1, 1.62782445e-08, - 0.048717469, - 1.43664725e-08, 0.998812616)
+	end,
+})
+
+Rayfield:LoadConfiguration()
