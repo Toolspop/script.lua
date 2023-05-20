@@ -47,7 +47,7 @@ wait(0.4)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1450.6666259765625, 354.4063720703125, -20030.431640625)
 end
 end)
-Section:NewButton("тупо тп", "ol", function()
+Section:NewButton("teleport", "ol", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1450.6666259765625, 503.5099182128906, -20030.431640625)
 end)
 
@@ -102,7 +102,7 @@ end)
 end)
 
 
-Section:NewSlider("разер хитбокса", "спииид", 25, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+Section:NewSlider("hitbox size", "спииид", 25, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
 _G.HeadSize = s
 _G.Disabled = true
 
