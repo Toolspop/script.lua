@@ -12,8 +12,8 @@ request = (syn and syn.request) or http and http.request or http_request or (flu
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
 	Name = "NaeHub | Ability Wars!",
-	LoadingTitle = "Made by Nae / Reworked by Vu",
-	LoadingSubtitle = "By Nae / Vu",
+	LoadingTitle = "Made by Nae",
+	LoadingSubtitle = "By Nae",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = NaeHub,
@@ -28,13 +28,13 @@ local Window = Rayfield:CreateWindow({
 	
 	KeySettings = {
 		Title = "NaeHub | Key System",
-		Subtitle = "By Nae / Vu",
+		Subtitle = "By Nae",
 		Note = "Join discord for the key!",
 		FileName = "NaeKey",
 		SaveKey = false,
 		GrabKeyFromSite = false,
 		Key = {
-			"die"
+			"yooo"
 		}
 	}
 })
