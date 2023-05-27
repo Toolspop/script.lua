@@ -34,7 +34,7 @@ local Window = Rayfield:CreateWindow({
 		SaveKey = false,
 		GrabKeyFromSite = false,
 		Key = {
-			"raar"
+			"joke"
 		}
 	}
 })
